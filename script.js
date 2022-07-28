@@ -1,6 +1,6 @@
 // Assignment code here
 function generatePassword() {
-  
+  console.log("This button works!");
 }
 
 
