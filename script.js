@@ -24,7 +24,7 @@ function generatePassword() {
       window.alert("Please enter a number.")
       return
     } if (passwordLength < 8 || passwordLength > 128) {
-      window.alert("Your password must be between 8 and 128 characters.")
+      window.alert("Your password must be between 8 and 128 characters. \n Please try again!")
       return
     } 
     // else {
@@ -59,29 +59,19 @@ function generatePassword() {
     if (specialCharactersPromt === true) {     
       passwordOptions.push(specialCharactersArray)
     }
+    if (passwordOptions.length === 0) {
+      window.alert("You must select at least one of the previous choices.\nPlease try again!")
+      return
+    }
 
 var generatePassword = ""
     for (var i = 0; i < passwordLength; i++) {
       var randomArray = getRandomCharacter(passwordOptions)
       var randomItem = getRandomCharacter(randomArray)
-      console.log(randomItem);
+      generatePassword += randomItem
     }
-
-    
-    
-  // prompt user questions
-    // pwd length 8 - 128 characters
-      // which special characters to inluce
-
-  // validate input
-  // generate password
-  // display pasword on page
-
-
-  
-
-
-  return "generated password here"
+      
+  return generatePassword
 }
 
 
