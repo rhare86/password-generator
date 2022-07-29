@@ -1,4 +1,19 @@
 // Assignment code here
+
+function randomNumber (min, max) {
+  if (!max) {
+    max = min
+    min = 0
+  }
+  var rnd = Math.random()
+  return Math.floor(min * (1 - rnd) + rnd * max)
+}
+
+// random number in list 
+function getRandomCharacter(list) {
+  return list[randomNumber(list.length)]
+}
+
 function generatePassword() {
 
   var userInput = window.prompt("How long do you want your password? (8 - 128 characters)");
@@ -41,12 +56,16 @@ function generatePassword() {
       passwordOptions.push(uppercaseArray)
     }
     
-    if (specialCharactersPromt === true) {
+    if (specialCharactersPromt === true) {     
       passwordOptions.push(specialCharactersArray)
     }
 
-    console.log(passwordOptions);
-
+var generatePassword = ""
+    for (var i = 0; i < passwordLength; i++) {
+      var randomArray = getRandomCharacter(passwordOptions)
+      var randomItem = getRandomCharacter(randomArray)
+      console.log(randomItem);
+    }
 
     
     
