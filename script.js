@@ -11,11 +11,21 @@ function generatePassword() {
     } if (passwordLength < 8 || passwordLength > 128) {
       window.alert("Your password must be between 8 and 128 characters.")
       return
-    
-    } else {
-      window.alert(`Thank You! Your password will contain ${userInput} characters.`);
-    }
+    } 
+    // else {
+    //   window.alert(`Thank You! Your password will contain ${userInput} characters.`)
+    //   return
+    // }
   
+    var numbersPromt = window.confirm("Do you want numbers in the password?")
+    var lowercasePromt = window.confirm("Do you want lowercase letters in the password?")
+    var uppercasePromt = window.confirm("Do you want uppercase letters in the password?")
+    var specialCharactersPromt = window.confirm("Do you want special characters in the password?")
+
+
+ 
+ 
+
 
     
     
