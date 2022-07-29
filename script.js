@@ -1,6 +1,37 @@
 // Assignment code here
 function generatePassword() {
+
+  var userInput = window.prompt("How long do you want your password? (8 - 128 characters)");
+
+  var passwordLength = parseInt(userInput)
+    // password number validation
+    if (isNaN(passwordLength)) {
+      window.alert("Please enter a number.")
+      return
+    } if (passwordLength < 8 || passwordLength > 128) {
+      window.alert("Your password must be between 8 and 128 characters.")
+      return
+    
+    } else {
+      window.alert(`Thank You! Your password will contain ${userInput} characters.`);
+    }
   
+
+    
+    
+  // prompt user questions
+    // pwd length 8 - 128 characters
+      // which special characters to inluce
+
+  // validate input
+  // generate password
+  // display pasword on page
+
+
+  
+
+
+  return "generated password here"
 }
 
 
